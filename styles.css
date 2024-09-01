@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: linear-gradient(135deg, #6f86d6, #48c6ef); /* Gradient background */
+    color: #ffffff; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    border-radius: 15px; 
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.instructions {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e0f7fa;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust columns based on how many you want per row */
+    grid-gap: 10px; /* Adjust the gap between cards */
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100px; /* Smaller width */
+    height: 120px; /* Smaller height */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card.show {
+    transform: rotateY(180deg);
+}
+
+
+#start-game {
+    background-color: #ff7043;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#start-game:hover {
+    background-color: #e64a19; /* Darker on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
